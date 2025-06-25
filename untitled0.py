@@ -22,10 +22,11 @@ st.markdown("""
         color: white;
         border-radius: 5px;
     }
-    .linea {
+    .vertical-line {
         border-left: 2px solid #d9a0a0;
-        height: 100vh;
-        margin: auto;
+        height: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -38,10 +39,10 @@ frase = random.choice([
     "“La sensibilidad guía la mirada.”"
 ])
 
-# Estructura de columnas
-col1, col2 = st.columns([1, 4], gap="large")
+# Crear estructura principal
+col1, col_div, col2 = st.columns([1.2, 0.02, 3], gap="small")
 
-# Columna izquierda
+# Columna izquierda (franja)
 with col1:
     st.image("mi_foto_circular.png", width=180)
     st.markdown("<h2 style='color:#772f40;'>Thais Choque</h2>", unsafe_allow_html=True)
@@ -50,10 +51,11 @@ with col1:
     st.markdown("📫 <strong>Contacto:</strong><br>thaisgchoque@gmail.com", unsafe_allow_html=True)
     st.text_input("¿Te gustaría que te escriba de vuelta?", placeholder="Tu correo o red social")
 
-    # Línea vertical
-    st.markdown("<div class='linea'></div>", unsafe_allow_html=True)
+# Columna intermedia: línea vertical separadora
+with col_div:
+    st.markdown("<div class='vertical-line'></div>", unsafe_allow_html=True)
 
-# Columna derecha con pestañas
+# Columna derecha (contenido del portafolio)
 with col2:
     tabs = st.tabs([
         "Inicio", 
