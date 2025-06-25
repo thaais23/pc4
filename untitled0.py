@@ -44,16 +44,30 @@ col1, col2 = st.columns([1, 3])
 # -----------------------
 # 📌 Columna izquierda
 with col1:
-    st.image("mi_foto_circular.png", width=200)
+    st.markdown("""
+    <div style='
+        background-color: #f8e6e9;
+        padding: 2rem 1rem;
+        border-radius: 12px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        text-align: center;
+    '>
+    """, unsafe_allow_html=True)
+
+    st.image("mi_foto_circular.png", width=180)
+
     st.markdown("<h2 style='color:#772f40;'>Thais Choque</h2>", unsafe_allow_html=True)
     st.markdown("Estudiante de Comunicación Audiovisual en la PUCP 🎬")
-    st.markdown("---")
+    st.markdown("<hr style='border: 0.5px solid #772f40;'>", unsafe_allow_html=True)
     st.markdown(f"<em style='color:#555;'>{frase_aleatoria}</em>", unsafe_allow_html=True)
-    st.markdown("---")
+    st.markdown("<hr style='border: 0.5px solid #772f40;'>", unsafe_allow_html=True)
     st.markdown("📫 **Contacto:** thaisgchoque@gmail.com")
+
     contacto_usuario = st.text_input("¿Te gustaría que te escriba de vuelta?")
     if contacto_usuario:
         st.success("¡Gracias! Me pondré en contacto contigo pronto. ✨")
+
+    st.markdown("</div>", unsafe_allow_html=True)
 
 # -----------------------
 # 📁 Columna derecha: Tabs
