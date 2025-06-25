@@ -41,9 +41,21 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Título e imagen circular
+# Título + imagen circular + frase inspiradora en dos columnas
 st.markdown("<h1 style='text-align: center;'>Portafolio de Thais Choque</h1>", unsafe_allow_html=True)
-st.image("mi_foto_circular.png", caption="Thais Choque", width=200)
+
+col1, col2 = st.columns([1, 2])
+with col1:
+    st.image("mi_foto_circular.png", caption="Thais Choque", width=200)
+with col2:
+    st.markdown("""
+    <div style="margin-top: 2rem;">
+    <em style='font-size: 18px; color: #772f40;'>
+    “Lo más importante no es la cámara, sino el ojo.”  
+    </em><br>
+    <span style='color:#444;'>— Alfred Eisenstaedt</span>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("### Estudiante de Comunicación Audiovisual · PUCP")
 st.write("Este portafolio reúne aspectos de mi formación, intereses creativos y sensibilidad visual en desarrollo.")
@@ -128,6 +140,11 @@ with tabs[6]:
     st.markdown("""
 Si deseas comunicarte conmigo, puedes escribirme a:  
 📬 **thaisgchoque@gmail.com**
+
+st.markdown("### ¿Quieres que te escriba de vuelta?")
+contacto_usuario = st.text_input("Déjame tu correo o red social preferida:")
+if contacto_usuario:
+    st.success("¡Gracias! Me pondré en contacto contigo pronto. ✉️")
 
 Gracias por visitar este espacio 🌸
 """)
