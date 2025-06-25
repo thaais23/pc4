@@ -43,7 +43,7 @@ frase = random.choice(frases)
 
 # Contenedor general
 with st.container():
-    col1, col2 = st.columns([1, 3], gap="large")
+    col1, col_divider, col2 = st.columns([1, 0.05, 3], gap="small")
 
     # Franja izquierda
     with col1:
@@ -58,9 +58,20 @@ with st.container():
         st.text_input("¿Te gustaría que te escriba de vuelta?", placeholder="Tu correo o red social")
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # Contenido principal (pestañas)
+    # Línea vertical divisoria
+    with col_divider:
+        st.markdown("<div style='height:100%; border-left: 2px solid #d9a0a0;'></div>", unsafe_allow_html=True)
+
+    # Contenido principal
     with col2:
-        tabs = st.tabs(["Inicio", "Resume", "Exploraciones Creativas", "Research", "Hobbies", "Contacto"])
+        tabs = st.tabs([
+            "Inicio", 
+            "Resume", 
+            "Exploraciones Creativas", 
+            "Research", 
+            "Hobbies", 
+            "Contacto"
+        ])
 
         with tabs[0]:
             st.subheader("Inicio")
