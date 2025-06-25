@@ -95,10 +95,10 @@ Aquí comparto mi proceso como estudiante de Comunicación Audiovisual, desde lo
         st.subheader("Exploraciones Creativas")
         st.markdown("""
 **Ejercicios fotográficos**  
-He trabajado con luz natural, retratos y composición. Me interesa cómo una imagen puede transmitir atmósferas sutiles.
+He trabajado con luz natural, retratos y composición. Me interesa cómo una imagen puede transmitir atmósferas.
 
 **Análisis visual**  
-Observar planos, ritmo narrativo y silencios significativos ha sido clave para enriquecer mi comprensión del lenguaje cinematográfico.
+Observar planos y el ritmo narrativo son claves para enriquecer mi comprensión del lenguaje cinematográfico.
 
 **Trabajo colaborativo**  
 He participado en procesos grupales de escritura y planificación visual. Valoro la creación colectiva desde distintas perspectivas.
@@ -111,16 +111,15 @@ He participado en procesos grupales de escritura y planificación visual. Valoro
 - Personajes femeninos en narrativas visuales  
 - Estética digital en redes sociales  
 - Impacto emocional del lenguaje audiovisual  
-- Colores, texturas y silencios como construcción de atmósferas
+- Colores, texturas y silencios 
         """)
 
     with tabs[4]:
         st.subheader("Gustos e Inspiraciones")
         st.markdown("""
-- Escuchar música: K-pop, Taylor Swift, playlists suaves  
-- Ver k-dramas y series con una estética cuidada  
-- Disfrutar de una taza de té como ritual creativo  
-- Pasar tiempo con mi mascota Maya, que acompaña mis momentos de inspiración  
+- Escuchar música: K-pop, Taylor Swift u otros artistas de pop 
+- Ver k-dramas     
+- Pasar tiempo con mi mascota Maya 🐾  
         """)
 
     with tabs[5]:
